@@ -29,7 +29,7 @@
     <script>
         // Game rooms
         var rooms = {
-            'start': {
+            'start': { // 1
                 'title': 'The Mysterious Dungeon',
                 'description': 'You are in a dark, cold dungeon. There are doors to the north and east.',
                 'image': 'start-room.jpg',
@@ -38,7 +38,7 @@
                     'east': 'laboratory'
                 }
             },
-            'library': {
+            'library': { // 2
                 'title': 'The Ancient Library',
                 'description': 'You find yourself surrounded by dusty books. There\'s a door to the south.',
                 'image': 'library.jpg',
@@ -46,7 +46,7 @@
                     'south': 'start'
                 }
             },
-            'laboratory': {
+            'laboratory': { // 3
                 'title': 'The Alchemist\'s Laboratory',
                 'description': 'Strange potions bubble on the stove. There\'s a door to the west.',
                 'image': 'laboratory.jpg',
@@ -55,40 +55,48 @@
                     'east': 'kitchen'
                 }
             },
-            '1': {
-                'title': '(Kitchen) I\'m cooking',
-                'description': 'Making good stuff',
+            'kitchen': { // 4
+                'title': 'Kitchen',
+                'description': 'Making good stuff. The steam rolls down to South of the kitchen',
+                'image': 'kitchen.jpg',
                 'directions': {
                     'west': 'laboratory',
                     'south': "living room",
                 }
             },
-            '2': {
+            'living room': { // 5
                 'title': 'Living room',
-                'description': 'Living ig',
+                'description': 'i sleep on the couch sometimes. The light gets cut off to east',
+                'image': 'living-room.jpg',
                 'directions': {
-                    'east': '3'
+                    'north': "kitchen",
+                    'east': 'garage'
                 }
             },
-            '3': {
+            'garage': { // 6
                 'title': 'Garage',
-                'description': 'I got that super car',
+                'description': 'i need a car :( Backdoor to the south is where I sneak out sometimes',
+                'image': 'garage.jpg',
                 'directions': {
-                    'south': '4'
+                    'west': "living room",
+                    'south': 'backyard'
                 }
             },
-            '4': {
+            'backyard': { // 7
                 'title': 'Backyard',
-                'description': 'I hate the grass',
+                'description': 'I hate the grass, so I hide in the shed to the west',
+                'image': 'backyard.jpg',
                 'directions': {
-                    'west': '5'
+                    'north': "backyard",
+                    'west': 'shed'
                 }
             },
-            '5': {
+            'shed': { // 8
                 'title': 'Shed',
-                'description': 'OOOO SCARY :C',
+                'description': 'OOOO SCARY :C. I hope no one is behind me',
+                'image': 'shed.jpg',
                 'directions': {
-                    'east': '4'
+                    'east': 'backyard'
                 }
             },
 
